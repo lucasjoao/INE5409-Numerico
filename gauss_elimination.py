@@ -7,13 +7,13 @@ def gauss(A):
     for i in range(0, n):
         
         for k in range(i+1, n):
-            c = -A[k][i]/A[i][i]
+            factor = A[k][i]/A[i][i]
             for j in range(i, n+1):
             	# the cell that will be filled with 0, there is no need to subtract
                 if i == j:
                     A[k][j] = 0
                 else:
-                    A[k][j] += c * A[i][j]
+                    A[k][j] -= factor * A[i][j]
 
     x = [0 for i in range(n)]
     for i in range(n-1, -1, -1):
