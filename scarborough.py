@@ -6,15 +6,15 @@ def scarborough(matrix):
 
     i_j = matrix.shape
 
-    doms = est_doms = []
+    doms, est_doms = ([], [])
 
     for i in range(i_j[0]):
         sum_line = 0
         for j in range(i_j[1]):
             sum_line += matrix.item(i, j) if i != j else 0
 
-        dom = matrix.item(i, i) >= sum_line
-        est_dom = matrix.item(i, i) > sum_line
+        dom = abs(matrix.item(i, i)) >= sum_line
+        est_dom = abs(matrix.item(i, i)) > sum_line
 
         doms.append(dom)
         est_doms.append(est_dom)
