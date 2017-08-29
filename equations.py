@@ -19,11 +19,10 @@ def equations(n):
         matrix[i, i+1] = 1
         matrix[i, i-1] = 1
         matrix[i, n] = 2
-        #b[i] = 2
 
     matrix[n-1, n-1] = 1
     matrix[n-1, n-2] = 1
     matrix[n-1,n] = 3
 
-    print(matrix)
+   # print(matrix)
     return matrix

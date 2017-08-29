@@ -1,12 +1,14 @@
 import numpy as np
 
-def residuo(Matrix, X, size):
+def residuo(Matrix, X):
+	nRows = size = len(X)
+	nCols = len(X) + 1;
 	r = np.zeros(size);
 	_sum = 0
-	for i in range(0, size - 1):
-		_sum = 0
-		for j in range(0, size - 1):
-			_sum += Matrix[i][j] * x(j)
-		r[i] = abs(_sum - Matrix[i][size+1])
 
-	max_r = np.amax(r)
+	for i in range(size):
+		_sum = 0
+		for j in range(size):
+			_sum = _sum + (Matrix[i,j] * X[j])
+		r[i] = abs(_sum-Matrix[i,size]);
+	return r
