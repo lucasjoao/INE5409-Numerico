@@ -1,7 +1,7 @@
 import numpy as np
 
 def residuo(Matrix, X):
-	nRows = size = len(X)
+	nRows, size = (len(X), len(X))
 	nCols = len(X) + 1;
 	r = np.zeros(size);
 	_sum = 0
