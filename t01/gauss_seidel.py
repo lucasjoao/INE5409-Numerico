@@ -6,7 +6,7 @@ def gauss_seidel(relax, est, stop):
     """
        Método iterativo de Gauss-Seidel para o sistema linear do trabalho.
        Onde relax é o fator de relaxação, est é o valor inicial, stop é o
-       critério de parada, n é a quantidade de linhas do sistema e k  é o
+       critério de parada, n é a quantidade de linhas do sistema e k é o
        número de iterações.
     """
 
