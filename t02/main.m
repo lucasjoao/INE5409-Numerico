@@ -11,6 +11,8 @@ disp("\n")
 disp("##############################################################################")
 disp("B:")
 disp(raizes(p, 0))
+disp("\n")
+disp("Perceba que a raiz faltante da alternativa A é a 'Column 5', as outras já apareceram anteriormente.")
 disp("##############################################################################")
 disp("\n")
 
