@@ -1,14 +1,22 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 
-def residuo(Matrix, X):
-	nRows, size = (len(X), len(X))
-	nCols = len(X) + 1;
-	r = np.zeros(size);
-	_sum = 0
 
-	for i in range(size):
-		_sum = 0
-		for j in range(size):
-			_sum = _sum + (Matrix[i,j] * X[j])
-		r[i] = abs(_sum-Matrix[i,size]);
-	return r
+def residuo(matrix, x):
+    """
+       Calcula e retorna o resíduo com base na matriz expandida e no vetor de
+       soluções.
+    """
+
+    size = len(x)
+    resultado = np.zeros(size)
+    somatorio = 0
+
+    for i in range(size):
+        somatorio = 0
+        for j in range(size):
+            somatorio = somatorio + (matrix[i, j] * x[j])
+        resultado[i] = abs(somatorio - matrix[i, size])
+
+    return resultado
