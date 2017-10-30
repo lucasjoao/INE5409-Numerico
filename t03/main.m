@@ -7,7 +7,7 @@ b = 1;
 % interpolacao polinomial com lagrange
 
 disp("########################################################################")
-disp("Interpolação polinomial com LaGrange")
+disp("Interpolação polinomial com Lagrange")
 
 % n + 1 sera o numero de coeficientes
 % determinado por tentativa e erro

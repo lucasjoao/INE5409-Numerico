@@ -1,13 +1,15 @@
-% funcao que calcula o valor do polinomio conf
+% funcao de horner
+% funcao que calcula o valor do polinomio recebido por horner conforme descricao
+% do seguinte link
 % https://pt.wikipedia.org/wiki/Esquema_de_Horner#Descri.C3.A7.C3.A3o
 
-function y = f_horner(n, a, xp)
+function resultado = f_horner(n, a, xp)
   % calcula y para cada elemento de x
-  for ip=1:length(xp)
-    aux = a(n+1);
-    for i=n:-1:1
-      aux = a(i) + aux*xp(ip);
+  for ip = 1 : length(xp)
+    aux = a(n + 1);
+    for i = n : -1 : 1
+      aux = a(i) + aux * xp(ip);
     end
-    y(ip) = aux;
+    resultado(ip) = aux;
   end
 end
