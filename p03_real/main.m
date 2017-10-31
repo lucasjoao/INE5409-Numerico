@@ -32,8 +32,9 @@ y_exato = f(xp);
 % y aproximado para polinomios escritos na base de lagrange
 yap_lagrange = f_lagrange(n, x, y, xp);
 
-% calculo do erro
-erro_max = max(abs(yap_lagrange - y_exato))
+% calculo do erro e abcissa x onde o erro maximo foi atingido
+[erro_max, ind_max] = max(abs(yap_lagrange - y_exato))
+x_erro_max = xp(ind_max)
 
 % plotagem do grafico
 % plot(xp, y_exato, '-r', xp, yap_lagrange, '..k')
@@ -59,8 +60,9 @@ coeficientes_mac = f_coef_maclaurin(n);
 % y aproximado com maclaurin determinado por horner
 yap_maclaurin = f_horner(n, coeficientes_mac, xp);
 
-% calculo do erro
-erro_max = max(abs(yap_maclaurin - y_exato))
+% calculo do erro e abcissa x onde o erro maximo foi atingido
+[erro_max, ind_max] = max(abs(yap_maclaurin - y_exato))
+x_erro_max = xp(ind_max)
 
 % plotagem do grafico
 % plot(xp, y_exato, '-r', xp, yap_maclaurin, '..k')
@@ -86,8 +88,9 @@ coeficientes_tcheby = f_coef_tcheby(n);
 % y aproximado com tcheby
 yap_tcheby = f_tcheby(n, coeficientes_tcheby, xp);
 
-% calculo do erro
-erro_max = max(abs(yap_tcheby - y_exato))
+% calculo do erro e abcissa x onde o erro maximo foi atingido
+[erro_max, ind_max] = max(abs(yap_tcheby - y_exato))
+x_erro_max = xp(ind_max)
 
 % plotagem do grafico
 % plot(xp, y_exato, '-r', xp, yap_tcheby, '..k')
@@ -119,8 +122,9 @@ coeficientes_pade = f_coef_maclaurin(M);
 % . significa elemento por elemento
 yap_pade = f_horner(n, a, xp) ./ f_horner(m, b, xp);
 
-% calculo do erro
-erro_max = max(abs(yap_pade - y_exato))
+% calculo do erro e abcissa x onde o erro maximo foi atingido
+[erro_max, ind_max] = max(abs(yap_pade - y_exato))
+x_erro_max = xp(ind_max)
 
 % plotagem do grafico
 % plot(xp, y_exato, '-r', xp, yap_pade, '..k')
