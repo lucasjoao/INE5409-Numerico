@@ -153,8 +153,8 @@ for i=1:numpasso+1
    xx(i)=x(1)+t*(cx+t*(bx+t*ax));
    yy(i)=y(1)+t*(cy+t*(by+t*ay));
    t=t+h;
-end%for
-plot(x,y,'x',x,y,'--k','linewidth',2,xx,yy,'-k','linewidth',2)
+end
+% plot(x,y,'x',x,y,'--k','linewidth',2,xx,yy,'-k','linewidth',2)
 grid on
 
 disp("########################################################################")
